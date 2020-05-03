@@ -1,1 +1,139 @@
-<h1>Welcome to my resume</h1>
+<!DOCTYPE html>
+<head>
+    <script type="text/javascript" src="static/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="static/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="static/semantic.min.js"></script>
+    <script type="text/javascript" src="static/index.js"></script>
+    <link rel="stylesheet" type="text/css"  src="static/semantic.min.css"/>
+    <link rel="stylesheet" type="text/css"  src="static/style.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet"/>
+</head>
+<title>
+    Rithin's Resume
+</title>
+<body>
+    <!-- <button onclick="msg()">hello buttion</button> -->
+    <div class="background" style="background-color:#0f0805;height: 100%;width:100%">
+        <div class="ui inverted ui top attached tabular menu" style="style="top: 0;
+        z-index: 100;
+        position: fixed;
+        width: 100%;background-color:#2e1d19;">
+                <!-- <div class="item">Personal Portfolio</div> -->
+                <!-- <a class="item" data-tab="first">Rithin Paul Reddy Kalluru</a> -->
+                <div class="right menu"> 
+                    <a class="active item" data-tab="second">About me</a>
+                    <a class="item" data-tab="third">Contact</a>
+                    <a class="item" data-tab="fourth">Education</a>
+                    <a class="item" data-tab="eight">Skills</a>
+                    <a class="item" data-tab="fifth">Projects & Publications</a>
+                    <a class="item" data-tab="sixth">Work Experience</a>
+                    <a class="item" data-tab="seventh">Extro</a>
+                </div>
+                </div>
+              <div class="ui top attached tab" data-tab="first" style="color:white;">
+                  KRP Reddy
+              </div>
+            <div class="ui top attached tab" data-tab="second" style="color:white;">
+                    <div class="ui grid" style="height:100%;width:100%">
+                        <div class="eight wide column" style="top:9rem;left:4rem;">
+                            <img class="ui large circular image"  src="/home/rithin/Downloads/1.jpg">
+                        </div>
+                        <div class="eight wide column" style="top:9rem;right:4rem">
+                            <p style="font-size: 20px;">Web Developer</p>
+                            <h1 style="margin-top:2rem;">Rithin Paul Reddy Kalluru </h1>
+                            <p style="margin-top:3rem;">The medium for communication in the current industry is Web, this basic need has propelled me to get my hands on to the end to end of Web Applications right from development to deployment.
+                            Full stack Web Developer with a history of working in the information technology and services industry. Skilled in front end and backend frameworks as well.</p>
+                            <button class="negative ui button" style="margin-top:2rem;">Download Resume</button>
+                        </div>
+                    </div>
+            </div>
+            <div class="ui top attached tab" data-tab="third" style="color:white;">
+                <div class="ui grid">
+                    <div class="eight wide column" style="top:9rem;left:1rem;">
+                        <h1>Location</h1>
+                        <div id="map" style="height:20rem;width: 35rem;">
+                            
+                        </div>
+                    </div>
+                    <div class="eight wide column" style="top:9rem;right:1rem;">
+                        <div class="row"><h1><i class="phone icon"></i><br>+91 - 8008360639</h1></div>
+                        <div class="row" style="margin-top:3rem;"><h1><i class="location arrow icon"></i><br>Warangal, Telangana, India</h1></div>
+                        <div class="row" style="margin-top:3rem;"><h1><i class="envelope icon"></i><br>rithinreddy25@gmail.com</h1></div>
+                    </div>
+                </div>
+            </div>
+                    <div class="ui top attached tab" data-tab="fourth" style="color:white;">
+                        <div class="ui grid" style="height:30rem;">
+                            <div class="sixteen wide column">
+                                <div class="row">
+                                        <img class="ui medium left floated image" src="/home/rithin/Downloads/1.jpg">
+                                        <img class="ui medium right floated image" src="/home/rithin/Downloads/2.jpg">
+                                </div>  
+                                <div class="row" style="text-align:center;margin-top:17rem;">
+                                    <h1>Amrita University, Coimbatore, India</h1>
+                                    <p style="font-size:20px;">Bachelor's of Technology in Computer Science and Engineering<, Object Oriented Programming</p> 
+                                    <ul style="text-align:center">
+                                    <li>Big Data Analytics</li>
+                                    <li>Data Structures</li>
+                                    <li>Database Management Systems</li>
+                                    <li>Networks</li>
+                                    <!-- - <p style="font-size:16px;">Course work : Big Data Analytics, Data Structures, Database Management Systems, Networks, Design & Analysis of Algorithms, Operating Systems -->
+                                    <li>Design & Analysis of Algorithms</li>
+                                    <li>Operating Systems</li>
+                                </ul>
+                                    
+                    
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                        <div class="ui top attached tab" data-tab="fifth" style="color:white;">
+                            progressing
+                            </div>
+                            <div class="ui top attached tab" data-tab="sixth" style="color:white;">
+                                2 yrs in TCS
+                                </div>
+                                <div class="ui top attached tab" data-tab="seventh" style="color:white;">
+                                    footballer
+                                    </div>
+                </div>
+            </div>
+</body>
+
+<script>
+    $('.menu .item').tab();
+
+    function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 15,
+            center: new google.maps.LatLng(17.991820, 79.526130),
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            mapTypeControl: false,
+			gestureHandling:'greedy',
+        }),
+
+        circle = new google.maps.Circle({
+            map: map,
+            clickable: false,
+            radius: 60,
+            fillColor: '#fff',
+            fillOpacity: .6,
+            strokeColor: '#313131',
+            strokeOpacity: .4,
+            strokeWeight: .8
+        });
+
+        icon ={
+            url: "{% static 'images/Helmet_location_pin_sample1.png' %}",
+            scaledSize: new google.maps.Size(35, 35),
+        }
+        var markerCenter = new google.maps.Marker({
+            position: {lat: 17.991820, lng: 79.526130},
+            map: map
+        });
+        circle.bindTo('center', markerCenter, 'position');
+    };
+    
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKkuj0MU6UJ4rePrDTTOYxOaWupvZwo_M&callback=initMap&libraries=geometry" async defer></script>
