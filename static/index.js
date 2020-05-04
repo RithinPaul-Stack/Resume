@@ -1,5 +1,0 @@
-
-function msg()
-{
-    alert("hello");
-}

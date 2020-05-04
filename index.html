@@ -6,6 +6,7 @@
     <script type="text/javascript" src="static/index.js"></script>
     <link rel="stylesheet" type="text/css"  src="static/semantic.min.css"/>
     <link rel="stylesheet" type="text/css"  src="static/style.css"/>
+    <link rel="stylesheet" type="text/css"  src="static/index.css"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet"/>
 </head>
 <title>
@@ -13,41 +14,44 @@
 </title>
 <body>
     <!-- <button onclick="msg()">hello buttion</button> -->
-    <div class="background" style="background-color:#0f0805;height: 100%;width:100%">
+    <div class="background" style="background-color:#1b1c1d;height: 100%;width:100%">
         <div class="ui inverted ui top attached tabular menu" style="style="top: 0;
         z-index: 100;
         position: fixed;
-        width: 100%;background-color:#2e1d19;">
+        width: 100%;>
                 <!-- <div class="item">Personal Portfolio</div> -->
-                <!-- <a class="item" data-tab="first">Rithin Paul Reddy Kalluru</a> -->
+                <!-- <a class="item" data-tab="seventh">Rithin Paul Reddy Kalluru</a> -->
                 <div class="right menu"> 
-                    <a class="active item" data-tab="second">About me</a>
+                    <a class="item" data-tab="second">About me</a>
                     <a class="item" data-tab="third">Contact</a>
                     <a class="item" data-tab="fourth">Education</a>
                     <a class="item" data-tab="eight">Skills</a>
                     <a class="item" data-tab="fifth">Projects & Publications</a>
                     <a class="item" data-tab="sixth">Work Experience</a>
-                    <a class="item" data-tab="seventh">Extro</a>
+            
                 </div>
                 </div>
-              <div class="ui top attached tab" data-tab="first" style="color:white;">
-                  KRP Reddy
+              <div class="ui top attached tab" data-tab="seventh" style="color:white;">
+                <div class="content" style="top:50rem">
+                    <h1> Welcome to my Portfolio! </h1>
+                </div>
               </div>
-            <div class="ui top attached tab" data-tab="second" style="color:white;">
+            <div class="ui top attached tab" id="meContent" data-tab="second" style="color:white;">
                     <div class="ui grid" style="height:100%;width:100%">
-                        <div class="eight wide column" style="top:9rem;left:4rem;">
-                            <img class="ui large circular image"  src="/home/rithin/Downloads/1.jpg">
+                        <div class="eight wide column" style="top:9rem;left:7rem;">
+                            <img class="ui medium circular image"  src="static/rithin.jpg">
                         </div>
                         <div class="eight wide column" style="top:9rem;right:4rem">
                             <p style="font-size: 20px;">Web Developer</p>
                             <h1 style="margin-top:2rem;">Rithin Paul Reddy Kalluru </h1>
                             <p style="margin-top:3rem;">The medium for communication in the current industry is Web, this basic need has propelled me to get my hands on to the end to end of Web Applications right from development to deployment.
                             Full stack Web Developer with a history of working in the information technology and services industry. Skilled in front end and backend frameworks as well.</p>
-                            <button class="negative ui button" style="margin-top:2rem;">Download Resume</button>
+                            <!-- <button type="submit" >Download!</button> -->
+                            <button class="negative ui button" onclick="window.location.href='static/Rithin_Resume.docx'" style="margin-top:2rem;">Download Resume</button>
                         </div>
                     </div>
             </div>
-            <div class="ui top attached tab" data-tab="third" style="color:white;">
+            <div class="ui top attached tab" id="locContent" data-tab="third" style="color:white;">
                 <div class="ui grid">
                     <div class="eight wide column" style="top:9rem;left:1rem;">
                         <h1>Location</h1>
@@ -62,45 +66,216 @@
                     </div>
                 </div>
             </div>
-                    <div class="ui top attached tab" data-tab="fourth" style="color:white;">
-                        <div class="ui grid" style="height:30rem;">
-                            <div class="sixteen wide column">
-                                <div class="row">
-                                        <img class="ui medium left floated image" src="/home/rithin/Downloads/1.jpg">
-                                        <img class="ui medium right floated image" src="/home/rithin/Downloads/2.jpg">
-                                </div>  
-                                <div class="row" style="text-align:center;margin-top:17rem;">
-                                    <h1>Amrita University, Coimbatore, India</h1>
-                                    <p style="font-size:20px;">Bachelor's of Technology in Computer Science and Engineering<, Object Oriented Programming</p> 
-                                    <ul style="text-align:center">
-                                    <li>Big Data Analytics</li>
-                                    <li>Data Structures</li>
-                                    <li>Database Management Systems</li>
-                                    <li>Networks</li>
-                                    <!-- - <p style="font-size:16px;">Course work : Big Data Analytics, Data Structures, Database Management Systems, Networks, Design & Analysis of Algorithms, Operating Systems -->
-                                    <li>Design & Analysis of Algorithms</li>
-                                    <li>Operating Systems</li>
-                                </ul>
-                                    
-                    
-                                </div>
-                                
-                            </div>
+            <div class="ui top attached tab" data-tab="fourth" id="eduContent" style="color:white;">
+                <div class="ui grid" style="height:30rem;">
+                    <div class="sixteen wide column">
+                        <div class="row">
+                                <img class="ui medium left floated image" src="static/1.jpg">
+                                <img class="ui medium right floated image" src="static/bookstore.jpg">
+                        </div>  
+                        <div class="row" style="text-align:center;margin-top:17rem;">
+                            <h1>Amrita University, Coimbatore, India</h1>
+                            <p style="font-size:20px;">Bachelor's of Technology in Computer Science and Engineering</p> 
+                            <ul>
+                            <li>Big Data Analytics</li>
+                            <li>Data Structures</li>
+                            <li>Database Management Systems</li>
+                            <li>Networks</li>
+                            <!-- - <p style="font-size:16px;">Course work : Big Data Analytics, Data Structures, Database Management Systems, Networks, Design & Analysis of Algorithms, Operating Systems -->
+                            <li>Design & Analysis of Algorithms</li>
+                            <li>Operating Systems</li>
+                        </ul>
+                            
+            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="ui top attached tab" id="propubContent" data-tab="fifth" style="color:white">
+                <div class="ui grid">
+                    <div class="eight wide column" style="top:2rem;left:1.5rem;">
+                        <h1 >Projects</h1>
+                        <h3 style="margin-top:1.5rem;">Water body shrinkage evaluation</h3> 
+                        <p style="font-size:15px;">
+                            Estimated the amount of shrinkage that occurred in lake Puzhal located in
+                            Chennai over a span of few years.
+                            Classification of the satellite images done using ArcGIS
+                            Feature set from the satellite images and accuracy assessment using R
+                        </p>
+
+                        <h3 style="margin-top:4.5rem">Hotel management system</h3>
+                        <p style="font-size:15px;">Built a complete end to end solution with functionalities of lodging, check out 
+                            and billing for availed services.
+                           Used Apache as web server for the application</p>
+
+                        <h3 style="margin-top:5.5rem">Portal for weather information</h3>
+                        <p style="font-size:15px;">
+                            Created a web page using HTML and through search bar user can type the place name and gets to know the weather with the help of backend node js integrated with a weather api.
+                        </p>
+                    </div>
+                    <div class="eight wide column" style="top:2rem;left:1rem;">
+                        <h1 >Publications</h1>
+                        <p style="margin-top:1.5rem;font-size: 20px;">Evaluation of Water Body Extraction from Satellite Images Using Open-Source Tools</p>
+                        <p>Published Date: February 2019</p>
+                        <ul>
+                            <li style="font-size:15px;margin-top: 2rem;">evaluates water body extraction from satellite images of Chennai city using machine learning methods</li>
+                            <li style="font-size:15px;margin-top: 2rem;">compares the classification results of different machine learning algorithms such as J48 decision tree, naive Bayes, multilayer perceptron, k-nearest neighbor, iso-cluster and random forest</li>
+                            <li style="font-size:15px;margin-top: 2rem;">Published in International Journal, Springer, based out in Germany</li>
+                            <li style="font-size:15px;margin-top: 2rem;">Here you go! <a href="https://doi.org/10.1007/978-981-13-6095-4_10">https://doi.org/10.1007/978-981-13-6095-4_10</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+                <div class="ui top attached tab" id="workContent" data-tab="sixth" style="color:white;">
+                    <div class="ui grid">
+                        <div class="eight wide column" style="top:2rem;left:1rem;">
+                            <h1>EXPERIENCE</h1>
+                            <h3>Tata Consutancy Services</h3>
+                            <p>Location : Bangalore, India</p>
+                            <p>Since: 2018 June - Present</p>
+                            <ul>
+                                <li style="font-size:15px;margin-top: 2rem;">Developed the workforce management application based on my web development experience using Django (Python Web Framework)</li>
+                                <li style="font-size:15px;margin-top: 2rem;">Developed the REST APIs for the above application and responsible for making it viable for Mobile platform using Django Rest Framework (DRF)</li>
+                                <li style="font-size:15px;margin-top: 2rem;">Responsible in designing the schema of the database of the application considering every requirement of Client</li>
+                                <li style="font-size:15px;margin-top: 2rem;">Documented and tested the application and produced the report for experienced team members for production support</li>
+                                <li style="font-size:15px;margin-top: 2rem;">Assisted web development team on developing digital signage for retail industry using Semantic UI</li>
+                            </ul>
+                        </div>
+                        <div class="eight wide column">
+                            <img class="ui medium image" style="top:12rem;
+                            left: 5rem;
+                            height: 10rem;
+                            width: 30rem;" src="static/tcs.png"> 
                         </div>
                     </div>
-                        <div class="ui top attached tab" data-tab="fifth" style="color:white;">
-                            progressing
-                            </div>
-                            <div class="ui top attached tab" data-tab="sixth" style="color:white;">
-                                2 yrs in TCS
-                                </div>
-                                <div class="ui top attached tab" data-tab="seventh" style="color:white;">
-                                    footballer
-                                    </div>
+                </div>
+            <div class="ui top attached tab" data-tab="eight" id="skillContent" style="color:white;">
+                <div class="ui grid" style="height:40rem;">
+                    <div class="six wide column" style="top:2rem;left:1.5rem;">
+                        <h3>Languages</h3>
+                        <ul>
+                            <li style="font-size:20px;">Java</li>
+                            <li style="font-size:20px;">Python</li>
+                            <li style="font-size:20px;">R</li>
+                            
+                        </ul>
+                        <h3>Platforms & Tools</h3>
+                        <ul>
+                            <li style="font-size:20px;">Windows</li>
+                            <li style="font-size:20px;">Linux</li>
+                            <li style="font-size:20px;">Microsoft Visio, Git</li>
+                            <li style="font-size:20px">Trello</li>
+                            
+                        </ul>
+                        <h3>Web Technologies</h3>
+                        <ul>
+                            <li style="font-size:20px;">HTML5, CSS3, Javascript</li>
+                            <li style="font-size:20px;">Bootstrap, Semantic UI</li>
+                            <li style="font-size:20px;">JSON, XML</li>
+                        </ul>
+                        <h3>Frameworks</h3>
+                        <ul>
+                            <li style="font-size:20px;">Django</li>
+                            <li style="font-size:20px;">Django REST framework</li>
+                            <li style="font-size:20px;">Angular</li>
+                            
+                        </ul>
+                        <h3>Databases</h3>
+                        <ul>
+                            <li style="font-size:20px;">MySQL</li>
+                            <li style="font-size:20px;">PostgreSQL</li>
+                         
+                            
+                        </ul>
+                    </div>
+                    <div class="ten wide column" style="top:2rem;right:1.5rem;">
+                        <img class="ui medium left floated image" style="height:10rem;" src="static/htmlcssjs.png">
+                        <img class="ui medium right floated image" style="height:13rem;" src="static/semantic.png">
+                        <img class="ui medium left floated image" src="static/django.png">
+                        <img class="ui medium right floated image" style="height:13rem;" src="static/psql.png">
+                        <img class="ui medium left floated image" src="static/drf.png">
+                        <img class="ui medium right floated image" style="height:13rem;" src="static/git.png">
+
+                        <!-- <img class="ui medium right floated image" src="static/"> -->
+                    </div>
+                </div>
+            </div>
                 </div>
             </div>
 </body>
 
+<style>
+   
+#propubContent  {
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+#workContent  {
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+#eduContent  {
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+#locContent  {
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+#meContent  {
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+#skillContent  {
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+} 
+</style>
 <script>
     $('.menu .item').tab();
 
