@@ -14,10 +14,7 @@
 </title>
 <body oncontextmenu="return false">
     <div class="background" style="background-color:#1b1c1d;height: 100%;width:100%">
-        <div class="ui inverted ui top attached tabular menu" style="style="top: 0;
-        z-index: 100;
-        position: fixed;
-        width: 100%;>
+        <div class="ui inverted ui top attached tabular menu">
             <div class="right menu"> 
                 <a class="item" data-tab="second">About me</a>
                 <a class="item" data-tab="third">Contact</a>
@@ -27,11 +24,8 @@
                 <a class="item" data-tab="sixth">Work Experience</a>
             </div>
         </div>
-            <div class="ui top attached tab" data-tab="seventh" style="color:white;">
-                <div class="content" style="top:50rem">
-                    <h1> Welcome to my Portfolio! </h1>
-                </div>
-            </div>
+        <!-- <h1 style="color:white;text-align: center" id="landText">Please Navigate ! :)</h1> -->
+        <!-- <div class="background" style="background-color:#1b1c1d;height: 100%;width:100%"> -->
             <div class="ui top attached tab" id="meContent" data-tab="second" style="color:white;">
                 <div class="ui grid" style="height:100%;width:100%">
                     <div class="eight wide column" style="top:9rem;left:7rem;">
@@ -48,7 +42,7 @@
                 </div>
             </div>
             <div class="ui top attached tab" id="locContent" data-tab="third" style="color:white;">
-                <div class="ui grid">
+                <div class="ui grid" style="height:100%;width:100%">
                     <div class="eight wide column" style="top:9rem;left:1rem;">
                         <h1>Location</h1>
                         <div id="map" style="height:20rem;width: 35rem;">
@@ -63,7 +57,7 @@
                 </div>
             </div>
             <div class="ui top attached tab" data-tab="fourth" id="eduContent" style="color:white;">
-                <div class="ui grid" style="height:30rem;">
+                <div class="ui grid" style="height:100%;width:100%">
                     <div class="eight wide column" style="top:2rem;left:1.5rem;">
                         <h1>Amrita University, Coimbatore, India</h1>
                         <p style="font-size:20px;">Bachelor's of Technology in Computer Science and Engineering</p> 
@@ -84,7 +78,7 @@
                 </div>
             </div>
             <div class="ui top attached tab" id="propubContent" data-tab="fifth" style="color:white">
-                <div class="ui grid">
+                <div class="ui grid" style="height:100%;width:100%">
                     <div class="eight wide column" style="top:2rem;left:1.5rem;">
                         <h1 >Projects</h1>
                         <h3 style="margin-top:1.5rem;">Water body shrinkage evaluation</h3> 
@@ -119,7 +113,7 @@
                 </div>
             </div>
                 <div class="ui top attached tab" id="workContent" data-tab="sixth" style="color:white;">
-                    <div class="ui grid">
+                    <div class="ui grid" style="height:100%;width:100%">
                         <div class="eight wide column" style="top:2rem;left:1rem;">
                             <h1>EXPERIENCE</h1>
                             <h3>Tata Consutancy Services</h3>
@@ -140,7 +134,7 @@
                     </div>
                 </div>
             <div class="ui top attached tab" data-tab="eight" id="skillContent" style="color:white;">
-                <div class="ui grid" style="height:40rem;">
+                <div class="ui grid" style="height:100%;width:100%">
                     <div class="six wide column" style="top:2rem;left:1.5rem;">
                         <h3>Languages</h3>
                         <ul>
@@ -153,7 +147,7 @@
                         <ul>
                             <li style="font-size:20px;">Windows</li>
                             <li style="font-size:20px;">Linux</li>
-                            <li style="font-size:20px;">Microsoft Visio, Git</li>
+                            <li style="font-size:20px;">Visual Studio, Git</li>
                             <li style="font-size:20px">Trello</li>
                             
                         </ul>
@@ -179,12 +173,14 @@
                         </ul>
                     </div>
                     <div class="ten wide column" style="top:2rem;right:1.5rem;">
-                        <img class="ui medium left floated image" style="height:10rem;" src="static/htmlcssjs.png">
-                        <img class="ui medium right floated image" style="height:13rem;" src="static/semantic.png">
-                        <img class="ui medium left floated image" src="static/django.png">
-                        <img class="ui medium right floated image" style="height:13rem;" src="static/psql.png">
-                        <img class="ui medium left floated image" src="static/drf.png">
-                        <img class="ui medium right floated image" style="height:13rem;" src="static/git.png">
+                        <img class="ui small left floated image" style="" src="static/htmlcssjs.png">
+                        <img class="ui medium right floated image" style="" src="static/semantic.png">
+                        <img class="ui small left floated image" src="static/django.png">
+                        <img class="ui small right floated image" style="" src="static/psql.png">
+                        <img class="ui small left floated image" src="static/drf.png">
+                        <img class="ui small right floated image" style="" src="static/git.png">
+                        <img class="ui small right floated image" style="" src="static/bootstrap.png">
+                        <img class="ui medium left floated image" style="" src="static/vscode.jpeg">
                     </div>
                 </div>
             </div>
@@ -265,6 +261,11 @@
 <script>
     $('.menu .item').tab();
 
+if($('div').hasClass('active'))
+{
+    alert("hellloo")
+    // $('#landText').css('display' 'none');
+}
     function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
             zoom: 15,
@@ -273,18 +274,6 @@
             mapTypeControl: false,
 			gestureHandling:'greedy',
         }),
-
-        // circle = new google.maps.Circle({
-        //     map: map,
-        //     clickable: false,
-        //     radius: 60,
-        //     fillColor: '#fff',
-        //     fillOpacity: .6,
-        //     strokeColor: '#313131',
-        //     strokeOpacity: .4,
-        //     strokeWeight: .8
-        // });
-
         icon ={
             url: "{% static 'images/Helmet_location_pin_sample1.png' %}",
             scaledSize: new google.maps.Size(35, 35),
@@ -293,7 +282,7 @@
             position: {lat: 17.991820, lng: 79.526130},
             map: map
         });
-        // circle.bindTo('center', markerCenter, 'position');
+        
     };
     
 </script>
