@@ -274,16 +274,16 @@
 			gestureHandling:'greedy',
         }),
 
-        circle = new google.maps.Circle({
-            map: map,
-            clickable: false,
-            radius: 60,
-            fillColor: '#fff',
-            fillOpacity: .6,
-            strokeColor: '#313131',
-            strokeOpacity: .4,
-            strokeWeight: .8
-        });
+        // circle = new google.maps.Circle({
+        //     map: map,
+        //     clickable: false,
+        //     radius: 60,
+        //     fillColor: '#fff',
+        //     fillOpacity: .6,
+        //     strokeColor: '#313131',
+        //     strokeOpacity: .4,
+        //     strokeWeight: .8
+        // });
 
         icon ={
             url: "{% static 'images/Helmet_location_pin_sample1.png' %}",
@@ -293,7 +293,7 @@
             position: {lat: 17.991820, lng: 79.526130},
             map: map
         });
-        circle.bindTo('center', markerCenter, 'position');
+        // circle.bindTo('center', markerCenter, 'position');
     };
     
 </script>
