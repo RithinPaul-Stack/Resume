@@ -16,7 +16,7 @@
     <div class="background" style="background-color:#1b1c1d;height: 100%;width:100%">
         <div class="ui inverted ui top attached tabular menu">
             <div class="right menu"> 
-                <a class="item" data-tab="second">About me</a>
+                <a class="item" id="default" data-tab="second">About me</a>
                 <a class="item" data-tab="third">Contact</a>
                 <a class="item" data-tab="fourth">Education</a>
                 <a class="item" data-tab="eight">Skills</a>
@@ -24,8 +24,8 @@
                 <a class="item" data-tab="sixth">Work Experience</a>
             </div>
         </div>
-        <!-- <h1 style="color:white;text-align: center" id="landText">Please Navigate ! :)</h1> -->
-        <!-- <div class="background" style="background-color:#1b1c1d;height: 100%;width:100%"> -->
+         <div class="background" style="background-color:#1b1c1d;height: 100%;width:100%"> -->
+                
             <div class="ui top attached tab" id="meContent" data-tab="second" style="color:white;">
                 <div class="ui grid" style="height:100%;width:100%">
                     <div class="eight wide column" style="top:9rem;left:7rem;">
@@ -261,11 +261,9 @@
 <script>
     $('.menu .item').tab();
 
-if($('div').hasClass('active'))
-{
-    alert("hellloo")
-    // $('#landText').css('display' 'none');
-}
+$(document).ready(function () {
+    $('#default').click();
+});
     function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
             zoom: 15,
